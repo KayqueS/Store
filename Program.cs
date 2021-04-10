@@ -6,15 +6,13 @@ namespace Store
     {
         static void Main(string[] args)
         {
-            Products prod = new Products();
-
             Console.WriteLine("Enter product date:");
             Console.Write("Name: ");
-            prod.Name = Console.ReadLine();
+            string name = Console.ReadLine();
             Console.Write("Price: ");
-            prod.Price = double.Parse(Console.ReadLine());
-            Console.Write("Amount in stock: ");
-            prod.Amount = int.Parse(Console.ReadLine());
+            double price = double.Parse(Console.ReadLine());
+
+            Products prod = new Products(name, price);
 
             Console.WriteLine();
             Console.WriteLine($"Product Data: {prod}");

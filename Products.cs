@@ -6,6 +6,25 @@
         public double Price;
         public int Amount;
 
+        public Products()
+        {
+
+        }
+
+        public Products(string name, double price, int amount)
+        {
+            Name = name;
+            Price = price;
+            Amount = amount;
+        }
+
+        public Products(string name, double price)
+        {
+            Name = name;
+            Price = price;
+            Amount = 5;
+        }
+
         public double TotalValueInStock()
         {
             return Price * Amount;
